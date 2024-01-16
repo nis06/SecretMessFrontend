@@ -46,7 +46,7 @@ const PostSecret = () => {
           <input
             type='text'
             id='name'
-            className='mt-1 p-2 border-gray-900 border-[2px] rounded w-full bg-white text-gray-200'
+            className='mt-1 p-2 border-gray-900 border-[2px] rounded w-full bg-white text-sky-900'
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
@@ -59,7 +59,7 @@ const PostSecret = () => {
           <input
             type='text'
             id='message'
-            className='mt-1 p-2 border-gray-900 border-[2px] rounded w-full bg-white text-gray-200'
+            className='mt-1 p-2 border-gray-900 border-[2px] rounded w-full bg-white text-sky-900'
             value={message}
             onChange={(e) => setMess(e.target.value)}
           />

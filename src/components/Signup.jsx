@@ -45,7 +45,7 @@ const Signup = ({setLoggedIn}) => {
         <div className=" mb-4 w-full">
          
           <input type="text" id="name"
-           className="appearance-none rounded-md relative block w-full px-3 py-2 border bg-white border-gray-300 placeholder-gray-500 text-gray-200 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+           className="appearance-none rounded-md relative block w-full px-3 py-2 border bg-white border-gray-300 placeholder-gray-500  text-sky-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
           value={name}
            onChange={(e) => setName(e.target.value)}
            placeholder='Name'
@@ -54,7 +54,7 @@ const Signup = ({setLoggedIn}) => {
         <div className="mb-4">
           
           <input type="email" id="email" 
-           className="appearance-none rounded-md relative block w-full px-3 py-2 border bg-white border-gray-300 placeholder-gray-500 text-gray-200 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+           className="appearance-none rounded-md relative block w-full px-3 py-2 border bg-white border-gray-300 placeholder-gray-500  text-sky-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
            value={email} 
            onChange={(e) => setEmail(e.target.value)} 
             placeholder='Email'
@@ -64,7 +64,7 @@ const Signup = ({setLoggedIn}) => {
         <div className="mb-4">
           
           <input type="password" id="password" 
-          className="appearance-none rounded-md relative block w-full px-3 py-2 border bg-white border-gray-300 placeholder-gray-500 text-gray-200 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+          className="appearance-none rounded-md relative block w-full px-3 py-2 border bg-white border-gray-300 placeholder-gray-500  text-sky-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
            value={password} onChange={(e) => setPassword(e.target.value)} 
             placeholder='Password'
            />

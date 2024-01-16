@@ -49,19 +49,19 @@ const Passrecovery = () => {
         <div className="mb-4">
           <label htmlFor="email" className="block text-sm font-medium text-sky-900">Email</label>
           <input type="email" id="email" 
-         className="appearance-none rounded-md relative block w-full px-3 py-2 border bg-white border-gray-300 placeholder-gray-500 text-gray-200 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+         className="appearance-none rounded-md relative block w-full px-3 py-2 border bg-white border-gray-300 placeholder-gray-500  text-sky-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
           value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
         <div className="mb-4">
           <label htmlFor="newPassword" className="block text-sm font-medium text-sky-900">New Password</label>
           <input type="password" id="newPassword" 
-         className="appearance-none rounded-md relative block w-full px-3 py-2 border bg-white border-gray-300 placeholder-gray-500 text-gray-200 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+         className="appearance-none rounded-md relative block w-full px-3 py-2 border bg-white border-gray-300 placeholder-gray-500 text-sky-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
            value={newPassword} onChange={(e) => setNewPassword(e.target.value)} />
         </div>
         <div className="mb-4">
           <label htmlFor="confirmPassword" className="block text-sm font-medium text-sky-900">Confirm Password</label>
           <input type="password" id="confirmPassword" 
-         className="appearance-none rounded-md relative block w-full px-3 py-2 border bg-white border-gray-300 placeholder-gray-500 text-gray-200 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+         className="appearance-none rounded-md relative block w-full px-3 py-2 border bg-white border-gray-300 placeholder-gray-500  text-sky-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
           value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
         </div>
         <button type="button" 
