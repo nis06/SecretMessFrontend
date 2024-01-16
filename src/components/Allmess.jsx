@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-const Allmess = () => {
+const Allmess = ({setLoggedIn}) => {
   const [messages, setMessages] = useState([]);
   const [error, setError] = useState('');
 
@@ -37,7 +37,7 @@ const Allmess = () => {
 
       <div className='flex flex-col '>
         {messages.map((message, index) => (
-          <div key={message._id} className='bg-zinc-800 text-gray-200 font-semibold text-lg rounded-md p-3 m-2'>
+          <div key={message._id} className='bg-white text-sky-900 font-semibold text-lg rounded-md p-3 m-2'>
             <span className='mr-2'>{index + 1}.</span> {message.message}
           </div>
         ))}

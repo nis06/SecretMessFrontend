@@ -40,26 +40,26 @@ const PostSecret = () => {
       <h2 className='text-center text-2xl font-bold mb-4 text-[#3e38e0]'>Post Secret Message</h2>
       <form className='max-w-md mx-auto'>
         <div className='mb-4'>
-          <label htmlFor='name' className='block text-sm font-medium text-gray-200'>
+          <label htmlFor='name' className='block text-sm font-medium text-sky-900'>
             Name
           </label>
           <input
             type='text'
             id='name'
-            className='mt-1 p-2 border-gray-900 border-[2px] rounded w-full bg-zinc-800  text-gray-200'
+            className='mt-1 p-2 border-gray-900 border-[2px] rounded w-full bg-white text-gray-200'
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
 
         <div className='mb-4'>
-          <label htmlFor='message' className='block text-sm font-medium text-gray-200'>
+          <label htmlFor='message' className='block text-sm font-medium text-sky-900'>
             Your secret message
           </label>
           <input
             type='text'
             id='message'
-            className='mt-1 p-2 border-gray-900 border-[2px] rounded w-full bg-zinc-800 text-gray-200'
+            className='mt-1 p-2 border-gray-900 border-[2px] rounded w-full bg-white text-gray-200'
             value={message}
             onChange={(e) => setMess(e.target.value)}
           />

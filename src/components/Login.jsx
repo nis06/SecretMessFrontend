@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const Login = () => {
+const Login = ({setLoggedIn}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -15,6 +15,10 @@ const handleLogin = async (e) => {
       
       // Handle successful login, set authentication state if needed
       // Use the navigate function to go to the dashboard
+        if(response.ok){
+          setLoggedIn(true)
+        }
+
       navigate('/home');
     } catch (error) {
       setError('Invalid credentials. Please try again.');
@@ -22,8 +26,11 @@ const handleLogin = async (e) => {
   };
 
   return (
-    <div className="h-auto  flex items-center justify-center mt-20 mx-auto bg-zinc-950 border rounded-md w-[50%] py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8">
+    <div className="h-auto  flex items-center justify-center -z-20  mt-20 mx-auto bg-rbga(0,0,0,2) border rounded-md w-[50%] py-12 px-4 sm:px-6 lg:px-8">
+     <div
+            className="rounded-full absolute w-[8em] h-[8em] md:w-[12em] md:h-[12em] -z-30   bg-gradient-to-tr from-green-400 to-blue-500  shadow-md left-[5%] md:left-[22%] top-4 circle1 animate-[circle1Anim_10s_infinite]"
+          ></div>  
+      <div className="max-w-md w-full space-y-8 ">
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-[#3e38e0]">Login</h2>
         </div>
@@ -39,7 +46,7 @@ const handleLogin = async (e) => {
                 type="email"
                 autoComplete="email"
                 required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-200  bg-zinc-800 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-200  bg-white rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -55,7 +62,7 @@ const handleLogin = async (e) => {
                 type="password"
                 autoComplete="current-password"
                 required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-200  bg-zinc-800 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-200  bg-white rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -72,7 +79,7 @@ const handleLogin = async (e) => {
           <div>
             <button
               type="submit"
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="group z-60 relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               Login
             </button>
@@ -96,6 +103,9 @@ const handleLogin = async (e) => {
             </Link>
           </p>
         </div>
+        <div
+            class="rounded-full absolute w-[9em] h-[9em] md:w-[14em] md:h-[14em] bg-gradient-to-tl from-pink-700 to-purple-500 left-[61%] top-[25em] md:top-[19rem] circle2 -z-[5] animate-[circle2Anim_10s_infinite]"
+          ></div>
       </div>
     </div>
   );
