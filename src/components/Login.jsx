@@ -10,16 +10,28 @@ const Login = ({setLoggedIn}) => {
 const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://secret-mess-backend.vercel.app/auth/login', { email, password });
-      console.log(response.data);
+      const response = await fetch('https://secret-mess-backend.vercel.app/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
       
-      // Handle successful login, set authentication state if needed
-      // Use the navigate function to go to the dashboard
-        if(response.ok){
-          setLoggedIn(true)
-        }
+      if (response.ok) {
+        // Assuming the response contains some authentication token or user information
+        const responseData = await response.json();
+  
+        // Set authentication state to true
+        setLoggedIn(true);
+  
+        // Use the navigate function to go to the dashboard or home page
+        navigate('/home');
+      } else {
+        // Handle other status codes if needed
+        setError('Invalid credentials. Please try again.');
+      }
 
-      navigate('/home');
     } catch (error) {
       setError('Invalid credentials. Please try again.');
     }
