@@ -19,6 +19,7 @@
 
 
 - ## ------------ Home Page---------------------
+- 
 <img width="960" alt="image" src="https://github.com/nis06/SecretMessFrontend/assets/112106948/1ac829a6-bc8d-489a-ba1b-af3a6334361c">
 
 
@@ -28,4 +29,7 @@
 
 
 - - ## ------------ Video --------------------
+
+
+https://github.com/nis06/SecretMessFrontend/assets/112106948/d46ac6c1-bd1b-43b9-a8d1-482739c01f11
 
