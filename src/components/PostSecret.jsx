@@ -11,7 +11,7 @@ const PostSecret = () => {
 
   const handlemessage = async () => {
     try {
-      const response = await fetch('http://localhost:4000/secretMessage/mess', {
+      const response = await fetch('https://secret-mess-backend.vercel.app/secretMessage/mess', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

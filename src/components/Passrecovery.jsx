@@ -13,7 +13,7 @@ const Passrecovery = () => {
 
   const handlePasswordChange = async () => {
     try {
-      const response = await fetch('http://localhost:4000/auth/recoverpass', {
+      const response = await fetch('https://secret-mess-backend.vercel.app/auth/recoverpass', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

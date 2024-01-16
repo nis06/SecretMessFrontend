@@ -8,7 +8,7 @@ const Allmess = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await fetch('http://localhost:4000/secretMessage/allmess');
+        const response = await fetch('https://secret-mess-backend.vercel.app/secretMessage/allmess');
 
         if (!response.ok) {
           throw new Error('Failed to fetch messages');
